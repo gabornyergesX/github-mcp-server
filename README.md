@@ -275,6 +275,7 @@ The following sets of tools are available (all are on by default):
 | `issues` | GitHub Issues related tools |
 | `notifications` | GitHub Notifications related tools |
 | `orgs` | GitHub Organization related tools |
+| `projects` | GitHub Projects V2 management tools |
 | `pull_requests` | GitHub Pull Request related tools |
 | `repos` | GitHub Repository related tools |
 | `secret_protection` | Secret protection related tools, such as GitHub Secret Scanning |
@@ -715,6 +716,81 @@ export GITHUB_MCP_TOOL_ADD_ISSUE_COMMENT_DESCRIPTION="an alternative description
   - `perPage`: Results per page for pagination (min 1, max 100) (number, optional)
   - `query`: Search query using GitHub organizations search syntax scoped to type:org (string, required)
   - `sort`: Sort field by category (string, optional)
+
+</details>
+
+<details>
+
+<summary>Projects</summary>
+
+- **add_issue_to_project** - Add issue to project
+  - `issue_id`: Issue node ID (string, required)
+  - `project_id`: Project ID (string, required)
+
+- **convert_project_item_to_issue** - Convert item to issue
+  - `item_id`: Item ID to convert (string, required)
+  - `project_id`: Project ID (string, required)
+
+- **create_draft_issue** - Create draft issue
+  - `body`: Issue body (string, optional)
+  - `project_id`: Project ID (string, required)
+  - `title`: Issue title (string, required)
+
+- **create_project** - Create project
+  - `owner`: Owner login (user or organization) (string, required)
+  - `owner_type`: Owner type (string, optional)
+  - `public`: Whether the project should be public. Defaults to private (false) (boolean, optional)
+  - `short_description`: Short description for the project (string, optional)
+  - `title`: Project title (string, required)
+
+- **create_project_issue** - Create issue
+  - `body`: Issue body (string, optional)
+  - `owner`: Repository owner (string, required)
+  - `repo`: Repository name (string, required)
+  - `title`: Issue title (string, required)
+
+- **delete_project** - Delete project
+  - `project_id`: Project ID (string, required)
+
+- **delete_project_item** - Delete project item
+  - `item_id`: Item ID (string, required)
+  - `project_id`: Project ID (string, required)
+
+- **get_project_fields** - Get project fields
+  - `number`: Project number (number, required)
+  - `owner`: Owner login (string, required)
+  - `owner_type`: Owner type (string, optional)
+
+- **get_project_items** - Get project items
+  - `number`: Project number (number, required)
+  - `owner`: Owner login (string, required)
+  - `owner_type`: Owner type (string, optional)
+
+- **list_projects** - List projects
+  - `owner`: Owner login (user or organization) (string, required)
+  - `owner_type`: Owner type (string, optional)
+
+- **update_project** - Update project
+  - `project_id`: Project ID (string, required)
+  - `public`: Set project visibility to public (true) or private (false) (boolean, optional)
+  - `short_description`: New short description (string, optional)
+  - `title`: New title (string, optional)
+
+- **update_project_item** - Update project item
+  - `archived`: Whether the item should be archived (true) or unarchived (false) (boolean, optional)
+  - `item_id`: Item ID (string, required)
+  - `project_id`: Project ID (string, required)
+
+- **update_project_item_field** - Update project item field
+  - `field_id`: Field ID (string, required)
+  - `item_id`: Item ID (string, required)
+  - `project_id`: Project ID (string, required)
+  - `text_value`: Text value (string, optional)
+
+- **update_project_item_position** - Move project item
+  - `item_id`: Item ID to move (string, required)
+  - `previous_item_id`: Item ID that should come directly before the moved item (optional) (string, optional)
+  - `project_id`: Project ID (string, required)
 
 </details>
 

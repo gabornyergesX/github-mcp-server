@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "title": "Convert item to issue",
+    "readOnlyHint": false
+  },
+  "description": "Convert a draft item to a repository issue",
+  "inputSchema": {
+    "properties": {
+      "item_id": {
+        "description": "Item ID to convert",
+        "type": "string"
+      },
+      "project_id": {
+        "description": "Project ID",
+        "type": "string"
+      }
+    },
+    "required": [
+      "project_id",
+      "item_id"
+    ],
+    "type": "object"
+  },
+  "name": "convert_project_item_to_issue"
+}

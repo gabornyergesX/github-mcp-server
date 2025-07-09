@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "title": "Move project item",
+    "readOnlyHint": false
+  },
+  "description": "Move a project item to a new position",
+  "inputSchema": {
+    "properties": {
+      "item_id": {
+        "description": "Item ID to move",
+        "type": "string"
+      },
+      "previous_item_id": {
+        "description": "Item ID that should come directly before the moved item (optional)",
+        "type": "string"
+      },
+      "project_id": {
+        "description": "Project ID",
+        "type": "string"
+      }
+    },
+    "required": [
+      "project_id",
+      "item_id"
+    ],
+    "type": "object"
+  },
+  "name": "update_project_item_position"
+}

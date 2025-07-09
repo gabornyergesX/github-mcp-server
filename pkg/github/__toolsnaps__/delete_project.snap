@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "title": "Delete project",
+    "readOnlyHint": false
+  },
+  "description": "Delete a Project V2 board",
+  "inputSchema": {
+    "properties": {
+      "project_id": {
+        "description": "Project ID",
+        "type": "string"
+      }
+    },
+    "required": [
+      "project_id"
+    ],
+    "type": "object"
+  },
+  "name": "delete_project"
+}

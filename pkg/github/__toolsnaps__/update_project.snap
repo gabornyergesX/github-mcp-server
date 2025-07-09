@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "title": "Update project",
+    "readOnlyHint": false
+  },
+  "description": "Update an existing Project V2 board",
+  "inputSchema": {
+    "properties": {
+      "project_id": {
+        "description": "Project ID",
+        "type": "string"
+      },
+      "public": {
+        "description": "Set project visibility to public (true) or private (false)",
+        "type": "boolean"
+      },
+      "short_description": {
+        "description": "New short description",
+        "type": "string"
+      },
+      "title": {
+        "description": "New title",
+        "type": "string"
+      }
+    },
+    "required": [
+      "project_id"
+    ],
+    "type": "object"
+  },
+  "name": "update_project"
+}

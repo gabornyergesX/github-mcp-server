@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "title": "Update project item",
+    "readOnlyHint": false
+  },
+  "description": "Archive / unarchive a project item",
+  "inputSchema": {
+    "properties": {
+      "archived": {
+        "description": "Whether the item should be archived (true) or unarchived (false)",
+        "type": "boolean"
+      },
+      "item_id": {
+        "description": "Item ID",
+        "type": "string"
+      },
+      "project_id": {
+        "description": "Project ID",
+        "type": "string"
+      }
+    },
+    "required": [
+      "project_id",
+      "item_id"
+    ],
+    "type": "object"
+  },
+  "name": "update_project_item"
+}

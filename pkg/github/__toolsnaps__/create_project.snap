@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "title": "Create project",
+    "readOnlyHint": false
+  },
+  "description": "Create a new Project V2 board",
+  "inputSchema": {
+    "properties": {
+      "owner": {
+        "description": "Owner login (user or organization)",
+        "type": "string"
+      },
+      "owner_type": {
+        "description": "Owner type",
+        "enum": [
+          "user",
+          "organization"
+        ],
+        "type": "string"
+      },
+      "public": {
+        "description": "Whether the project should be public. Defaults to private (false)",
+        "type": "boolean"
+      },
+      "short_description": {
+        "description": "Short description for the project",
+        "type": "string"
+      },
+      "title": {
+        "description": "Project title",
+        "type": "string"
+      }
+    },
+    "required": [
+      "owner",
+      "title"
+    ],
+    "type": "object"
+  },
+  "name": "create_project"
+}
